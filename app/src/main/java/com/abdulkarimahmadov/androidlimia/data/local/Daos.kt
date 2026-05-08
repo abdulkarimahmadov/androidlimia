@@ -23,6 +23,9 @@ interface DialSuggestionsDao {
     @Query("SELECT * FROM dial_suggestions WHERE phoneNumber LIKE :query || '%' ORDER BY usageCount DESC, updatedAtMillis DESC LIMIT 10")
     fun observeSuggestions(query: String): Flow<List<DialSuggestionEntity>>
 
+    @Query("SELECT * FROM dial_suggestions WHERE phoneNumber = :number LIMIT 1")
+    suspend fun getByNumber(number: String): DialSuggestionEntity?
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun upsert(item: DialSuggestionEntity)
 

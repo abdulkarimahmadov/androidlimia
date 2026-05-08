@@ -2,9 +2,7 @@ package com.abdulkarimahmadov.androidlimia.features.recents
 
 import android.content.Intent
 import android.net.Uri
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
-import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -32,7 +30,6 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun RecentsScreen(viewModel: RecentsViewModel = hiltViewModel()) {
     val context = LocalContext.current
@@ -52,10 +49,6 @@ fun RecentsScreen(viewModel: RecentsViewModel = hiltViewModel()) {
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .combinedClickable(
-                            onClick = { },
-                            onLongClick = { }
-                        )
                         .padding(horizontal = 20.dp, vertical = 10.dp),
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically

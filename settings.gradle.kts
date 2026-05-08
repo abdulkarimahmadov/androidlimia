@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "androidlimia"
+rootProject.name = "androidlumia"
 include(":app")

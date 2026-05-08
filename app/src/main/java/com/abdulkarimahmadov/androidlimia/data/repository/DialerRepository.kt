@@ -9,6 +9,13 @@ class DialerRepository(private val dao: DialSuggestionsDao) {
 
     suspend fun recordDial(number: String) {
         if (number.isBlank()) return
-        dao.upsert(DialSuggestionEntity(number, usageCount = 1, updatedAtMillis = System.currentTimeMillis()))
+        val current = dao.getByNumber(number)
+        dao.upsert(
+            DialSuggestionEntity(
+                phoneNumber = number,
+                usageCount = (current?.usageCount ?: 0) + 1,
+                updatedAtMillis = System.currentTimeMillis()
+            )
+        )
     }
 }

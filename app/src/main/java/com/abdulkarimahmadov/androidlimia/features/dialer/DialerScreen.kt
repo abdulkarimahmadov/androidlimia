@@ -6,6 +6,7 @@ import android.os.VibrationEffect
 import android.os.Vibrator
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.combinedClickable
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -64,7 +65,7 @@ fun DialerScreen(viewModel: DialerViewModel = hiltViewModel()) {
                         modifier = Modifier
                             .fillMaxWidth()
                             .padding(vertical = 4.dp)
-                            .combinedClickable(onClick = { viewModel.append(item.phoneNumber) }, onLongClick = { })
+                            .clickable { viewModel.append(item.phoneNumber) }
                     )
                 }
             }
