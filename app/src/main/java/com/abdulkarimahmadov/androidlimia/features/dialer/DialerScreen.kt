@@ -65,7 +65,7 @@ fun DialerScreen(viewModel: DialerViewModel = hiltViewModel()) {
                         modifier = Modifier
                             .fillMaxWidth()
                             .padding(vertical = 4.dp)
-                            .clickable { viewModel.append(item.phoneNumber) }
+                            .clickable { viewModel.setNumber(item.phoneNumber) }
                     )
                 }
             }

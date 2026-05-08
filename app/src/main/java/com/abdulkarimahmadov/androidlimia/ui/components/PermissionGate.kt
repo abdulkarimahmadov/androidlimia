@@ -49,10 +49,10 @@ fun PermissionGate(content: @Composable () -> Unit) {
             horizontalAlignment = Alignment.Start,
             verticalArrangement = Arrangement.Center
         ) {
-            Text("permissions", style = MaterialTheme.typography.displayMedium)
+            Text("Permissions", style = MaterialTheme.typography.displayMedium)
             Text("Allow contacts, call logs and phone permissions for full Lumia dialer behavior.", style = MaterialTheme.typography.bodyLarge)
             Button(onClick = { launcher.launch(requiredPermissions) }, modifier = Modifier.padding(top = 12.dp)) {
-                Text("grant")
+                Text("Grant")
             }
         }
     }

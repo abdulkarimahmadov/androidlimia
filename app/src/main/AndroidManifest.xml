@@ -13,7 +13,7 @@
         android:name=".MainApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_lumia_tile"
-        android:label="AndroidLimia"
+        android:label="AndroidLumia"
         android:roundIcon="@drawable/ic_lumia_tile"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.Material.Light.NoActionBar">

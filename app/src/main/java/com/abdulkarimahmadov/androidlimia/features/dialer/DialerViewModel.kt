@@ -30,6 +30,10 @@ class DialerViewModel @Inject constructor(
         input.value += symbol
     }
 
+    fun setNumber(number: String) {
+        input.value = number
+    }
+
     fun backspace() {
         if (input.value.isNotEmpty()) input.value = input.value.dropLast(1)
     }
